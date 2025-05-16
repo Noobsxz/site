@@ -25,7 +25,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: linear-gradient(135deg, #001f3f, #003366, #004080, #00509e);
+      background: linear-gradient(135deg, #000000, #000000, #000000, #000000);
       background-size: 400% 400%;
       color: white;
       flex-direction: column;
@@ -178,7 +178,8 @@
       margin: 20px 0;
       z-index: 2;
       width: 100%;
-      max-width: 300px;
+      max-width: 400px;
+      height: 80px;
     }
 
     .title {
@@ -212,17 +213,15 @@
 </head>
 <body>
   <div class="start-screen" id="startScreen">
-    <h1>Para Alguém Especial</h1>
-    <p>Clique no botão para receber uma mensagem especial</p>
     <button class="heart-button" onclick="showMessageScreen()">
-      ❤ Clique Aqui ❤
+      ❤️ Clique Aqui ❤️
     </button>
   </div>
 
   <div class="message-screen" id="messageScreen">
     <div class="hearts" id="heartsContainer"></div>
     
-    <h1 class="title">Para Você ❤</h1>
+    <h1 class="title">Para Você ❤️</h1>
     
     <div class="photo-carousel">
       <div class="carousel-container">
@@ -235,40 +234,23 @@
     </div>
 
     <div class="spotify-player">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5VBjyOQzqlPNgdRPMM6prF?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3vkCueOmm7xQDoJ17W1Pm3?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 
     <div class="countdown" id="countdown"></div>
 
     <div class="text-message">
-      A cada dia que passa, meu coração se enche mais de carinho e admiração por você. Cada sorriso seu ilumina o meu mundo, e cada abraço me faz sentir que estou exatamente onde deveria estar. Você é a razão dos meus melhores pensamentos, e tudo ao seu lado se torna mais bonito e significativo. Eu te amo para sempre ❤
+      A cada dia que passa, meu coração se enche mais de carinho e admiração por você. Cada sorriso seu ilumina o meu mundo, e cada abraço me faz sentir que estou exatamente onde deveria estar. Você é a razão dos meus melhores pensamentos, e tudo ao seu lado se torna mais bonito e significativo. Eu te amo ❤️
     </div>
   </div>
 
   <script>
-    // 1. Primeiro método: Usando imagens locais (coloque na mesma pasta do arquivo HTML)
     const carouselImages = [
-      'https://i.postimg.cc/d3GC6sjJ/IMG-20250404-WA0041.jpg',
+      'https://i.postimg.cc/htzGd9VT/Screenshot-4.jpg',
       'https://i.postimg.cc/qMdyRKpq/20250404-164851.jpg://postimg.cc/8fPsPVYY',
-      'https://i.postimg.cc/J7XjMxVS/IMG-20250404-WA0046.jpg',
-      'https://i.postimg.cc/fRzd7hth/Screenshot-1.png'
-
+      'https://i.postimg.cc/FHMHg7xq/Screenshot-3.jpg',
+      'https://i.postimg.cc/fRzd7hth/Screenshot-1.png',
       ];
-
-    // 2. Segundo método: Usando imagens de uma subpasta (recomendado)
-    // const carouselImages = [
-    //   'imagens/foto1.jpg',
-    //   'imagens/foto2.jpg',
-    //   'imagens/foto3.jpg',
-    //   'imagens/foto4.jpg'
-    // ];
-
-    // 3. Terceiro método: Usando URLs completas (para imagens online)
-    // const carouselImages = [
-    //   'https://exemplo.com/foto1.jpg',
-    //   'https://exemplo.com/foto2.jpg',
-    //   'https://exemplo.com/foto3.jpg'
-    // ];
 
     // Inicializa o carrossel
     function initCarousel() {
@@ -351,7 +333,7 @@
 
     const createHearts = () => {
       const container = document.getElementById('heartsContainer');
-      const heartTypes = ['❤', '💖', '💗', '💓', '💞', '💕'];
+      const heartTypes = ['❤️', '💖', '💗', '💓', '💞', '💕'];
       
       setInterval(() => {
         const heart = document.createElement('div');
@@ -369,7 +351,7 @@
     // Efeito de explosão de corações no início
     const createHeartsBurst = () => {
       const container = document.getElementById('heartsContainer');
-      const heartTypes = ['❤', '💖', '💗', '💓', '💞', '💕'];
+      const heartTypes = ['❤️', '💖', '💗', '💓', '💞', '💕'];
       
       for (let i = 0; i < 50; i++) {
         const heart = document.createElement('div');
@@ -386,7 +368,7 @@
     }
 
     // Configuração do cronômetro
-    const startDate = new Date('2022-06-10T00:00:00');
+    const startDate = new Date('2024-12-10');
     const countdown = document.getElementById('countdown');
 
     function updateCountdown() {
@@ -406,7 +388,7 @@
       const min = minutes % 60;
       const sec = seconds % 60;
 
-      countdown.innerHTML = `❤ Eu te amo há: ${years} anos, ${months} meses, ${remainingDays} dias, ${hr} horas, ${min} minutos e ${sec} segundos`;
+      countdown.innerHTML = `❤️ Eu te amo há: ${years} anos, ${months} meses, ${remainingDays} dias, ${hr} horas, ${min} minutos e ${sec} segundos`;
     }
 
     function startCountdown() {
